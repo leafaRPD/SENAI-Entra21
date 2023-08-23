@@ -5,7 +5,7 @@ let nota1
 let nota2
 let nota3
 let media1
-
+Sal
 nota1 = Number(prompt(`Digite a primeira nota do aluno.`))
 nota2 = Number(prompt(`Agora, digite a segunda nota.`))
 nota3 = Number(prompt(`E a terceira nota do aluno.`))
