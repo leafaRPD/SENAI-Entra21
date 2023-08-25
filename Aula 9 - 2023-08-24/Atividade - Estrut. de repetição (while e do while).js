@@ -133,5 +133,18 @@ while(i<numeroJogadores) {
 
 // 8) Na maioria das linguagens de programação, é possível contar caracteres de uma string (palavra, frase, etc). Criar um sistema no qual o usuário digite 5 palavras e ao final mostre o tamanho em número de caracteres, de cada uma delas. (Pesquisar sobre o comando length, para solução).
 
+let lista = ''// lista de palavras com número de caracteres
+let i = 1
+let palavra
+let novaPalavra
+alert(`Digite 5 palavras:`)
+while (i<6){
+    palavra = "palavra "+i
+    novaPalavra = prompt(`Digite a ${palavra}:`)
+    i++
+    lista = `${lista}${novaPalavra}, com ${novaPalavra.length} caracteres. `
+}
+
+
 // 9) Um determinado restaurante trabalha com limite de lotação de 50 pessoas. Porém, mesmo com esse limite, o restaurante pode encerrar seu atendimento antes do horário por falta de insumos para produção das refeições. Criar um programa que receba os dados da quantidade de pessoas que chegam ao restaurante (repetidamente) e se os insumos estão "ok" ou "insuficientes". Caso alguma das duas possibilidades aconteça, encerrar o programa e mostrar ao final o motivo do encerramento (atingiu limite de pessoa ou faltaram insumos).
 
