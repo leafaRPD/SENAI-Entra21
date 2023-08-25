@@ -31,7 +31,6 @@ while(popA < popB) {
 
 // 2) Os números primos possuem várias aplicações dentro da Computação, por exemplo, na criptografia. Um número primo é aquele que é divisível apenas por um e por ele mesmo. Faça um programa que peça ao usuário para digitar um número e informe se ele é primo. Depois implemente um laço de repetição para solicitar cinco números inteiros e mostre na tela se são primos ou não.
 
-
 let numUm //, numDois, numTres, numQuatro, numCinco
 let i = 3
 // alert(`Insira números para verificar se são primos.`)
@@ -55,7 +54,27 @@ console.log(`${numUm} não é primo.`)
 }}
 
 // 3) Faça um programa que gera uma lista dos números primos existentes entre 1 e um número inteiro digitado pelo usuário.
+let numeroFinal = prompt(`Digite um número para verificação.`)
+let numeroAtual = 2
+while (numeroAtual <= numeroFinal){
+        let ehPrimo = true;
+        let divisor = 2;
+do {
+    //verificação
+        if(numeroAtual % divisor ===o){
+            ehPrimo = false;
+            break;
+        }
+        divisor++
+} while (divisor <= numeroAtual / 2)
+if(ehPrimo){
+    alert('Esses números são os primos: ${numeroAtual')
+}
+numeroAtual++
+}
 
+
+// minha tentativa de resolução. Copiei o código do Exercício 2 e tentei modificá-lo.
 let num // ex: 28
 let i = 3
 let lista
@@ -125,10 +144,6 @@ while(i<numeroJogadores) {
 
     i++
 }
-
-
-
-
 
 
 // 8) Na maioria das linguagens de programação, é possível contar caracteres de uma string (palavra, frase, etc). Criar um sistema no qual o usuário digite 5 palavras e ao final mostre o tamanho em número de caracteres, de cada uma delas. (Pesquisar sobre o comando length, para solução).
