@@ -1,4 +1,4 @@
-																	// Atividade - Estruturas Condicionais (SWITCH / CASE)
+// 		Condicionais (SWITCH / CASE)
 // 1) Fazer um programa onde o usuário pode acessar as seguintes opções:
 
 // A) Falar com a atendente    B) Falar com o RH
