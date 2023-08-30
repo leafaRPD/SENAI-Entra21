@@ -74,21 +74,32 @@ if (i = 0) {
 // 5) Fazer um programa no qual o usuário deve digitar 10 números entre 0 e 50. Ao final deve mostrar o maior número digitado e o menor número digitado. Os números digitados que não estiverem entre 0 e 50, devem ser desconsiderados.
 
 let maior = 0
-let menor = 999999999999999
+let menor = 50
 let numero
-alert(`Você deverá digitar 10 números entre 0 e 50.`)
-for (i=0; i<10; i++){
+let media = 0
+let divisor
+let divisorFinal
+
+divisor = Number(prompt(`Quantos números você quer verificar?`)) // usuário digita '10' conforme enunciado.
+divisorFinal = divisor
+alert(`Você deverá digitar ${divisor} números entre 0 e 50.`)
+for (i=0; i<divisor; i++){
     numero = Number(prompt(`${i+1}º número:`))
-    do {
-        
-    }while(numero >)
-    if (numero < menor){ 
+    if (numero >= 0 && numero <= 50){
+        if (numero <= menor){ 
         menor = numero
-    }
-    if (numero > maior){ 
+        }
+        if (numero >= maior){ 
         maior = numero
+        }
+        media = media + numero
+    }else{
+        divisorFinal--
     }
 }
+media = media/divisorFinal
+let invalidos = divisor - divisorFinal
+alert(`Você digitou ${divisor} números porém ${invalidos} não estão entre 0 e 50. O maior dos ${divisorFinal} válidos foi ${maior}, o menor ${menor} e a média destes é ${media}.`)
 
 // 6) Elaborar um sistema similar a um cofre "porquinho". O cofre aceita moedas de 1 centavo, 5 centavos, 10 centavos, 25 centavos e 50 centavos. O programa deve iniciar perguntando qual moeda deseja inserir no cofre e repetir o processo até que o usuário digite 0 (condição para encerrar). Após encerrar, deve-se mostrar a quantidade de cada tipo de moeda que foi inserida naquele dia e o total acumulado de economia.
 
