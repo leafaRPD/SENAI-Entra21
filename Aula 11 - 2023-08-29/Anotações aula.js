@@ -95,14 +95,17 @@ if (i = 0) {
 
 // 5) Fazer um programa no qual o usuário deve digitar 10 números entre 0 e 50. Ao final deve mostrar o maior número digitado e o menor número digitado. Os números digitados que não estiverem entre 0 e 50, devem ser desconsiderados.
 
-let maior = 99999999999999
-let menor = 0
+let maior = 0
+let menor = 999999999999999
 let numero
 
 for (i=0, i<10, i++){
     numero = Number(prompt(`Digite o ${i+1}º número:`))
-    if (numero > menor){ // verificar se está correto
-        menor = numero 
+    if (numero < menor){ 
+        menor = numero
+    }
+    if (numero > maior){ 
+        maior = numero
     }
 }
 
