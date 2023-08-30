@@ -19,3 +19,4 @@ do {
 } while (dinheiro > 0)
 console.log(`Você gastou ${300-dinheiro}, comprou ${i} produtos e sobrou ${dinheiro} Reais.`)
 alert(`Você gastou ${300-dinheiro}, comprou ${i} produtos e sobrou ${dinheiro} Reais.`)
+

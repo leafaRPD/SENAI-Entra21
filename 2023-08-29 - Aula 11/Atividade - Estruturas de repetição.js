@@ -1,33 +1,4 @@
-// while e do while - > quando não se sabe quantas vezes se repetirá
-// for -> quando se sabe quantas vezes o loop se repetirá
-
-// Sintaxe do for:
-// for (valor inicial; condição; iteração) {
-//   código a ser repetido enquanto a condições for verdadeira
-// > é aqui, no final do código que será executado o 'i++'/'i--'
-// }
-
-// for (i=0; i<42; i++)
-// neste caso, o loop será repetido 42 vezes.
-
-// for (i=33; i>0; i--)
-// neste caso, o loop será repetido 33 vezes.
-
-// o 42 ou 33 pode ser uma variável 'quantidade' que o usuário definirá através de um prompt. Ou seja, a quantidade de vezes que o loop será repetido pode ser variável.
-
-for(i=0; i<10; i++){
-    console.log(`Buu!`)
-}
-
-// exemplo em que a pessoa insere o número de repetições:
-let nuBu = prompt(`Insira o número de "Bu" desejado:`)
-let bu = "b"
-for(i=0; i<nuBu; i++){
-    bu = bu+"u"
-    console.log(`${bu}!`)
-}
-
-// Exercício proposto:
+                                // Lista de exercícios - Estruturas de repetição
 // 1) Desenvolver um programa no qual o usuário digite o número de multas que deseja cadastrar e para cada multa deve colocar o valor em reais e os pontos perdidos na carteira de habilitação. Ao final, mostrar o somatório das multas e dos pontos, caso os pontos alcancem 21 ou mais, exibir a mensagem “Você está irregular”, senão, exibir “Você está regular”.
 
 let numMultas, valorTotal = 0, valor = 0, ponto = 0, pontoTotal = 0
@@ -68,15 +39,22 @@ console.log(`Sua salada de frutas está pronta! Ela tem ${totalDeFrutas} frutas,
 // 3) Desenvolva um programa no qual o usuário deve digitar o nome e a idade de 5 pessoas. Ao final mostrar a média de idade delas e a maior idade dentre essas pessoas. 
 
 // 4) Faça um programa no qual o usuário deve digitar a sequência de números de 1 a 10, invertida. Caso digite algum número fora da sequência, interromper e mostrar uma mensagem "Você errou a sequência". Do contrário, ao final mostrar uma mensagem "Você terminou a sequência corretamente".
-// Este não funcionou
-let numero 
+// Agora este também funciona
+let numero = 11
+let chave
 alert(`Digite a sequência de números de 1 a 10, invertida.`)
-for (i=10; numero>0; i--) {
+for (i=10; numero>1; i--) {
     numero = Number(prompt(`Digite o próximo:`))
     if (numero != i){
         alert(`Você errou a sequência.`)
+        break
     }
+    chave = numero
 }
+if(chave === 1){
+    alert(`Parabéns!`)
+}
+
 // Este funcionou
 let numero
 let i = 10
@@ -98,9 +76,12 @@ if (i = 0) {
 let maior = 0
 let menor = 999999999999999
 let numero
-
-for (i=0, i<10, i++){
-    numero = Number(prompt(`Digite o ${i+1}º número:`))
+alert(`Você deverá digitar 10 números entre 0 e 50.`)
+for (i=0; i<10; i++){
+    numero = Number(prompt(`${i+1}º número:`))
+    do {
+        
+    }while(numero >)
     if (numero < menor){ 
         menor = numero
     }
