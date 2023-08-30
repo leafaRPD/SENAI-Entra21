@@ -101,8 +101,8 @@ let numero
 
 for (i=0, i<10, i++){
     numero = Number(prompt(`Digite o ${i+1}º número:`))
-    if (numero > maior){
-        maior = numero
+    if (numero > menor){ // verificar se está correto
+        menor = numero 
     }
 }
 
