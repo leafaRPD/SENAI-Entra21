@@ -99,7 +99,7 @@ for (i=0; i<divisor; i++){
 }
 media = media/divisorFinal
 let invalidos = divisor - divisorFinal
-alert(`Você digitou ${divisor} números porém ${invalidos} não estão entre 0 e 50. O maior dos ${divisorFinal} válidos foi ${maior}, o menor ${menor} e a média destes é ${media}.`)
+alert(`Você digitou ${divisor} números dos quais ${invalidos} não estão entre 0 e 50. O maior dos ${divisorFinal} válidos foi ${maior}, o menor ${menor}, a média é ${media}.`)
 
 // 6) Elaborar um sistema similar a um cofre "porquinho". O cofre aceita moedas de 1 centavo, 5 centavos, 10 centavos, 25 centavos e 50 centavos. O programa deve iniciar perguntando qual moeda deseja inserir no cofre e repetir o processo até que o usuário digite 0 (condição para encerrar). Após encerrar, deve-se mostrar a quantidade de cada tipo de moeda que foi inserida naquele dia e o total acumulado de economia.
 
