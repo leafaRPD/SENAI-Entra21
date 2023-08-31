@@ -146,7 +146,8 @@ do{
 
 let numSec // número secreto -> aquele que deverá ser advinhado.
 let chute // tentativa de advinhação
-
+let contador = 0
+let lista = "Você chutou os valores"
 do{
     numSec = Number(prompt(`Defina qual o número secreto. Deve estar entre 0 e 100, inclusos.`)).toFixed(0)
     numSec = Number(numSec)
@@ -155,19 +156,23 @@ do{
 
 do{
     chute = Number(prompt(`Chute um número entre 0 e 100, inclusos.`)).toFixed(0)
-        if (chute !> 0 && chute !< 100){
-        alert(`Chute inválido.`)
-        break
-        }
     chute = Number(chute)
+        if (chute > 100 || chute < 0 ){
+        alert(`Chute inválido.`)
+        }
+        contador++
         if(chute>numSec){
         alert(`O número secreto é menor.`)
-        }if else(chute<numSec){
+        }else if(chute<numSec){
         alert(`O número secreto é maior.`)
-        }else{
-        alert(`Parabéns! Você acertou`)
+        }else if (chute === numSec){
+        alert(`Parabéns! Você acertou em ${contador} tentativas.`)
+        break
         }
-}while()
+        lista = (`${lista} ${chute},`)
+}while(chute != numSec)
+lista = (`${lista} ${chute}.`)
+console.log(`Parabéns! Você acertou em ${contador} tentativas. ${lista}`)
 
 
 
