@@ -130,5 +130,47 @@ let mediaDosValores = media (resultado, quantidade)
 alert(`A media dos números digitados é ${mediaDosValores}.`)
 
 // 7 - Faça um programa que recebe três números do usuário, e identifica o maior através de uma função e o menor número através de outra função e depois os exibe por um alert.
+let menor = 99999999999999999999
+let maior = -99999999999999999999
+let numero
+let soma = 0
+let divisor
+// definir as funções de maior, menor e média.
+function fmaior(numero){
+    
+    if (numero >= maior){ 
+        maior = numero
+        }
+    return maior
+}
+
+function fmenor(numero){
+    
+    if (numero <= menor){ 
+        menor = numero
+        }
+    return menor
+}
+
+function fmedia(soma, divisor){
+let media = soma/divisor
+return media
+}
+
+divisor = Number(prompt(`Quantos números você quer verificar?`)) // usuário digita '3' conforme enunciado.
+
+for (i=0; i<divisor; i++){
+    numero = Number(prompt(`${i+1}º número:`))
+    fmaior(numero)
+    fmenor(numero)
+    soma = soma + numero
+}
+media = fmedia(soma, divisor)
+
+console.log(`Você digitou ${divisor} números. O maior foi ${maior}, o menor ${menor}, a média é ${media}.`)
+
+alert(`Você digitou ${divisor} números. O maior foi ${maior}, o menor ${menor}, a média é ${media}.`)
+
+
 
 // 8 - Crie uma função que recebe um número inteiro e retorna todos os primos, de 1 até ele.
