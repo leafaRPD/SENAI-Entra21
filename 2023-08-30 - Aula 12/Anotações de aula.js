@@ -48,25 +48,3 @@ function areaTriangulo(base,altura) {
     }
     
 resultado = areaTriangulo(6,4)
-
-                        // EXERCICIO PROPOSTO EM SALA:
-let numeroLotes = 0 // usuário digitará quantos lotes; exercício pede 4.
-numeroLotes = Number(prompt(`Digite o número de lotes que você pretende analisar.`))
-let listaDeAreas = "Áreas:"
-let area
-
-function areaLote(larg,prof) {
-    return (larg*prof)
-}
-
-for(i=0; i<numeroLotes; i++) {
-    let larg = Number(prompt(`Digite a largura do ${i+1}º lote:`))
-    let prof = Number(prompt(`Digite a profundidade do ${i+1}º lote:`))
-    area = areaLote(larg,prof)
-    listaDeAreas = `${listaDeAreas} ${i+1}º lote = ${area}`
-        if (i === (numeroLotes-1)) {
-            listaDeAreas = `${listaDeAreas}.`
-        }else{
-            listaDeAreas = `${listaDeAreas};`
-        }
-    }

@@ -103,7 +103,40 @@ alert(`Você digitou ${divisor} números dos quais ${invalidos} não estão entr
 
 // 6) Elaborar um sistema similar a um cofre "porquinho". O cofre aceita moedas de 1 centavo, 5 centavos, 10 centavos, 25 centavos e 50 centavos. O programa deve iniciar perguntando qual moeda deseja inserir no cofre e repetir o processo até que o usuário digite 0 (condição para encerrar). Após encerrar, deve-se mostrar a quantidade de cada tipo de moeda que foi inserida naquele dia e o total acumulado de economia.
 
+let moeda = 0
+let valorTotal=0
+let numeroDeMoedas = 0
+do{
+    moeda = Number(prompt(`Qual o valor da moeda que você quer colocar?`))
+    if(moeda === 1 || moeda === 5 || moeda === 10 || moeda === 25 || moeda === 50) {
+    valorTotal += moeda
+    numeroDeMoedas++
+    }
+
+}while(moeda != 0)
+valorTotal = valorTotal/100
+alert(`Você acumulou R$${valorTotal} em ${numeroDeMoedas} moedas.`)
+console.log(valorTotal)
+console.log(numeroDeMoedas)
+
 // 7) O acampamento base sul do Everest fica a cerca de 5.360m de altura. A partir dele, muitas expedições partem rumo ao cume que fica a 8.848m de altura, levando dias para chegar. Considerando a saída do acampamento base, faça um programa que pergunte ao usuário a altitude em metros escalada no dia. Caso seja atingida a marca de 8 dias e não tenha chegado ao cume, mostrar mensagem “Você deve voltar, pois corre risco de ficar sem oxigênio”. Se chegar ao cume em menos de 8 dias, mostrar a quantidade de dias que foram necessários para tal.
+
+let jornada = 0
+let valorTotal = (8848-5360)
+let dias = 0
+do{
+    jornada = Number(prompt(`Qual a altitude, em metros, escalada até o fim deste dia?`))
+    valorTotal -= jornada
+    dias++
+    if (dias === 8){
+    alert('Você deve voltar pois corre risco de ficar sem oxigênio!')
+    break
+    }else if(valorTotal <= 0){
+    alert(`Você chegou ao cume em ${dias} dias.`)
+    break
+    }
+}while(valorTotal > 0)
+
 
 // 8) Criar um programa que simule um jogo de cartas, onde inicialmente deve-se perguntar o nome do jogador 1 e o nome do jogador 2. Cada jogador tem 5 cartas para jogar. Inicia pelo jogador 1, em seguida o jogador 2, e assim segue alternando até que cada jogador tenha "jogado" suas 5 cartas. Os valores das cartas devem se digitados. Vence o jogador que tiver a maior soma. Ao final mostrar o nome do jogador vencedor e a sua soma. Caso tenha dado empate, mostrar mensagem na tela "O jogo empatou!". (DESAFIO: Aceitar somente cartas com valores entre 1 e 13, como no baralho).
 
