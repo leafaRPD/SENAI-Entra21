@@ -46,9 +46,9 @@ resultado = areaTriangulo(6,4)
 function primo(a){
     let resposta = ""
     if ((a%2) === 0){
-    resposta = (`O número ${a} é primo.`)    
+    resposta = (`O número ${a} é par.`)    
     }else{
-    resposta = (`O número ${a} NÃO é primo.`)   
+    resposta = (`O número ${a} é ímpar.`)   
     }
     return resposta
 }

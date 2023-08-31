@@ -140,6 +140,35 @@ do{
 
 // 8) Criar um programa que simule um jogo de cartas, onde inicialmente deve-se perguntar o nome do jogador 1 e o nome do jogador 2. Cada jogador tem 5 cartas para jogar. Inicia pelo jogador 1, em seguida o jogador 2, e assim segue alternando até que cada jogador tenha "jogado" suas 5 cartas. Os valores das cartas devem se digitados. Vence o jogador que tiver a maior soma. Ao final mostrar o nome do jogador vencedor e a sua soma. Caso tenha dado empate, mostrar mensagem na tela "O jogo empatou!". (DESAFIO: Aceitar somente cartas com valores entre 1 e 13, como no baralho).
 
+
+
 // 9) Criar um jogo de adivinhação. O usuário deve digitar um número entre 0 e 100 (número secreto). Em seguida deve ser perguntado qual número imagina-se que seja o número secreto. A cada rodada, deve-se dar dicas após o palpite "o número digitado é menor" ou "o número digitado é maior". Quando o número for adivinhado, mostrar uma mensagem de parabéns e o número de tentativas realizadas.
+
+let numSec // número secreto -> aquele que deverá ser advinhado.
+let chute // tentativa de advinhação
+
+do{
+    numSec = Number(prompt(`Defina qual o número secreto. Deve estar entre 0 e 100, inclusos.`)).toFixed(0)
+    numSec = Number(numSec)
+
+}while(numSec>100 || numSec<0)
+
+do{
+    chute = Number(prompt(`Chute um número entre 0 e 100, inclusos.`)).toFixed(0)
+        if (chute !> 0 && chute !< 100){
+        alert(`Chute inválido.`)
+        break
+        }
+    chute = Number(chute)
+        if(chute>numSec){
+        alert(`O número secreto é menor.`)
+        }if else(chute<numSec){
+        alert(`O número secreto é maior.`)
+        }else{
+        alert(`Parabéns! Você acertou`)
+        }
+}while()
+
+
 
 // 10) Em uma competição de dardos, os competidores se classificam para a próxima fase caso consigam 75% ou mais da pontuação total, que é 60 pontos. Caso consiga 50% ou mais, porém abaixo de 75%, vai para a repescagem. Menos que isso, é eliminado. Cada arremesso pode marcar de 0 a 10 pontos, dependendo da precisão. Criar um programa para armazenar a pontuação dos 6 arremessos de um competidor e ao final mostrar uma mensagem com sua pontuação, seu desempenho (percentual) e se ele está classificado, se foi para a repescagem ou se está desclassificado.
