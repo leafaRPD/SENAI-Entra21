@@ -89,7 +89,49 @@ console.log(index)
 
 
 // 6) Fazer um programa no qual o usuário deve digitar as três cores primárias (amarelo, vermelho, azul) e armazenar em um vetor. Solicitar três vezes “Digite uma cor primária: ”. Em seguida deve digitar as três cores secundárias (laranja, verde, violeta) e armazenar em outro vetor. Solicitar três vezes “Digite uma cor secundária: ”. Um novo vetor deve ser criado com cores primárias + secundárias (amarelo, vermelho, azul, laranja, verde, violeta). No início dessa lista deve-se adicionar preto e no final branco. Perguntar “Adicionar no início da lista: ” e “Adicionar ao final da lista: ”. Mostrar na tela a sequência completa, incluindo preto e branco.
+//let coresPrimarias = ['amarelo', 'vermelho', 'azul']
+//let coresSecundarias = ['laranja', 'verde', 'violeta']
+let coresPrimarias = []
+let coresSecundarias =[]
+let cores = []
+let varTemp = '' // variável temporária
+for (i=0; i<3; i++){
+    varTemp = prompt(`Usuário, digite a ${i+1}º das três cores primárias:`)
+    coresPrimarias.push(varTemp)
+}
+for (i=0; i<3; i++){
+    varTemp = prompt(`Usuário, digite a ${i+1}º das três cores secundárias:`)
+    coresSecundarias.push(varTemp)
+}
+cores = coresPrimarias
+cores.push(coresSecundarias[0])
+cores.push(coresSecundarias[1])
+cores.push(coresSecundarias[2])
+cores.push('branco')
+cores.unshift('preto')
+console.log(cores)
 
 // 7) Faça um programa que solicite ao usuário digitar 5 números e mostre a soma da multiplicação dos números pelo maior número digitado. (Exemplo: pegar os 4 números digitados que não são o maior e multiplicá-los individualmente pelo maior. Mostrar a soma das multiplicações).
 
+/* usar unshift para quando for o maior número e usar push para os demais. Assim o maior fica na primeira posição e pode-se fazer todas as contas. */
+let varTemporaria = 0 // variável temporária para cada número digitado a ser adicionado no array.
+let listaDeNumeros = []
+let multiplicacoes = 0 // se colocar "" ele levará os números como str e 'somará' 1,3,5 como 135.
+let maiorNumero = -99999999 // variável estabelecida para comparação dos números, para guardar o maior deles. Ou usar um outro 'if' dentro do loop e, quando for a primeira 'passada' do loop (nesse caso, i=0), atribuir o primeiro valor digitado no prompt à variável 'maiorNumero'.
+for (i=0; i<5; i++){
+    varTemporaria = Number(prompt(`Digite o ${i+1}º número:`))
+    if(varTemporaria > maiorNumero){
+        maiorNumero = varTemporaria
+        listaDeNumeros.unshift(varTemporaria)
+    }else{
+        listaDeNumeros.push(varTemporaria)
+    }
+}
+console.log(listaDeNumeros)
+for (i=1; i<5; i++){
+    multiplicacoes += (listaDeNumeros[0]*listaDeNumeros[i])
+}
+console.log(multiplicacoes)
+
 // 8) Em cidades menores, o alistamento para o exército acontece esporadicamente ao longo dos anos. Criar um programa no qual pergunte ao usuário se houve alistamento dos anos 2000 a 2009, uma pergunta para cada ano. Se houve alistamento deve ser digitado “S” e se não houve alistamento “N”. Após digitar tudo, deve-se mostrar na tela o último ano que houve alistamento. Caso não tenha ocorrido alistamento, mostrar “Não houve alistamento nos últimos 10 anos”
+
