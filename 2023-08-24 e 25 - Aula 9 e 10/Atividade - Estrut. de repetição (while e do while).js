@@ -34,10 +34,10 @@ while(popA < popB) {
 let numUm //, numDois, numTres, numQuatro, numCinco
 let i = 3
 // alert(`Insira números para verificar se são primos.`)
-numUm = Number(prompt(`Insira o primeiro número a ser verificado:`))
-if (numUm == 2){
+numUm = Number(prompt(`Insira o número a ser verificado:`))
+if (numUm == 2 || numUm == 3){
 	alert(`${numUm} é primo.`)
-}else if(numUm%2 == 0){
+}else if(numUm%2 == 0 || numUm < 2){
 	alert(`${numUm} não é primo.`)
 }else{
 while(numUm>i) {

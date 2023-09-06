@@ -7,6 +7,7 @@ let comprimento
 palavra = prompt(`Digite uma palavra:`)
 comprimento = palavra.length // usar isso para saber o valor de 'i', para realizar o loop de verificação.
 
+
 // 2) Desenvolver um programa que peça ao usuário o número de doenças a cadastrar, no qual ele deve cadastrar o nome da doença e se ela é transmitida por vírus, bactéria ou por ambos. Ao final, mostrar quatro listas: doenças transmitidas por vírus, doenças transmitidas por bactérias, doenças transmitidas por ambos, lista com todas doenças.
 
 // 3) Faça um programa em que o usuário digite o nome de 5 produtos e seus preços (“Digite o produto” / “Digite o seu preço”) e armazene esses nomes e preços em dois vetores separados. O programa deve calcular e mostrar:

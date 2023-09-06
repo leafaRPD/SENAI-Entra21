@@ -41,9 +41,52 @@ resultado = areaTriangulo(6,4)
 // 3 - Crie uma função que determine quantos números primos existem dentro de um
 // intervalo que o usuário informar. Utilize uma abordagem de repetição com for ou while.
 
+/*
+1 - declarar variáveis e funções
+2 - com prompt, fazer 2 perguntas para estabelecer o intervalo
+3 - se a função primo retornar 'é primo', adicionar à lista. Senão, ignorar.
+
+*/
+let limInferior = 0
+let limSuperior = 0
+let listaDePrimos = []
+
+limInferior = Number(prompt("Digite o limite inferior a ser verificado."))
+limSuperior = Number(prompt("Digite o limite superior a ser verificado."))
+
+for(p=limInferior; p<(limSuperior+1); p++){
+    if (primo(p) == `É primo.`){
+        listaDePrimos.push(p)
+    }
+}
+
+function primo(p){
+let i = 3
+if (p == 2 || p == 3){
+	return (`É primo.`)
+    
+}else if(p%2 == 0 || p < 2){
+	return(`Não é primo.`)
+    
+}else{
+while(p>i) {
+	if(p%i == 0){
+        return(`Não é primo.`)
+	    
+	}else{
+	    i = i+2 //soma 2 para só pegar os números ímpares
+	}}
+if(i == p){
+    return(`É primo.`)
+}}
+}
+
+console.log(listaDePrimos)
+
+
 
 // 4 - Utilizando funções, fazer um sistema que receba um número e retorne se ele é par ou ímpar.
-function primo(a){
+function parOuImpar(a){
     let resposta = ""
     if ((a%2) === 0){
     resposta = (`O número ${a} é par.`)    
@@ -55,7 +98,7 @@ function primo(a){
 
 let numero
 numero = Number(prompt(`Digite um número para ser verificado.`))
-primo(numero)
+parOuImpar(numero)
 
 
 
