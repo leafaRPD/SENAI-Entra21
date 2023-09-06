@@ -80,4 +80,37 @@ sort ( ) Ordena os elementos do array e retorna o array.
 link para documentação: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 */
 
+/* Minha primeira matriz:*/
+[[],[],[]] // assim tem 3 linhas; cada colchete interno é uma linha sem coluna.
+
+let matriz = [['A', 'B', 'C'],['D', 'D', 'D'],['E', 'F', 'G']]
+alert(matriz) // mostrará tudo em linha
+console.table(matriz) // mostrará no console uma matriz
+
+// para retornar o F:
+alert(matriz[2][1])
+
+// método de percorrer uma matriz: um loop dentro do outro.
+for (i=0; i<3; i++){
+    for (j=0; j<3; j++){
+        alert(matriz[i][j]) // ou seja, ele vai entrar com i=0 e j=0, em seguida fará o loop do j mais 2 vezes (totalizando 3) antes de aumentar o i pela primeira vez. E repete 1 vez. E repete a última vez.
+
+    }
+
+}
+
+// como criar um número random inteiro, dentro de um intervalo escolhido, sendo o máximo excluso e o mínimo incluso:
+// return Math.floor(Math.random()* (max - min) + min)
+// Exemplo: quero que seja de 0 a 10, devo colocar max = 11 (para incluir o 10) e min = 0
+return Math.floor(Math.random()* (11 - 0) + 0)
+
+// exemplo:
+for (i = 0; i< 10; i++){
+    console.log(Math.floor(Math.random() * (11 - 0) + 0))
+}
+
+
+
+
+
 
