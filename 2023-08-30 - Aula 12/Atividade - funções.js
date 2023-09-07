@@ -60,28 +60,41 @@ for(p=limInferior; p<(limSuperior+1); p++){
     }
 }
 
+// como transformar o código acima em uma função:
+
+function ListaDePrimosNoIntervalo(limInferior=0, limSuperior=0){
+let listaDePrimos = []
+for(p=limInferior; p<(limSuperior+1); p++){
+    if (primo(p) == `É primo.`){
+        listaDePrimos.push(p)
+    }
+}
+}
+
+
 function primo(p){
 let i = 3
 if (p == 2 || p == 3){
-	return (`É primo.`)
-    
+	return (`É primo.`)    
 }else if(p%2 == 0 || p < 2){
 	return(`Não é primo.`)
-    
 }else{
-while(p>i) {
-	if(p%i == 0){
-        return(`Não é primo.`)
-	    
-	}else{
+    while(p>i) {
+	    if(p%i == 0){
+            return(`Não é primo.`)	    
+	    }else{
 	    i = i+2 //soma 2 para só pegar os números ímpares
-	}}
-if(i == p){
-    return(`É primo.`)
-}}
+	    }
+    }
+    if(i == p){
+        return(`É primo.`)
+    }
+}
 }
 
 console.log(listaDePrimos)
+ListaDePrimosNoIntervalo(5, 17)
+
 
 
 
@@ -167,7 +180,6 @@ function media (resultado, quantidade){
     let mediaDosValores = (resultado/quantidade)
     return mediaDosValores
     }
-
 let mediaDosValores = media (resultado, quantidade)
 
 alert(`A media dos números digitados é ${mediaDosValores}.`)
