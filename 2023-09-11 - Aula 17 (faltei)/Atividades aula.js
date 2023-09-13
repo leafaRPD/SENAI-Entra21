@@ -1,7 +1,5 @@
 /* Faltei esta aula pois estávamos no aeroporto em SP. O professor realizou a avaliação 2 (0,2 da nota final) e lançou a avaliação 3 (0,6 da nota final).
 */
-
-
     
 /* >>>>>>>>>>> Avaliação III (Prática) <<<<<<<<<<
 
