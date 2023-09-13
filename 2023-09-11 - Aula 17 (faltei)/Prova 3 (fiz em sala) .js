@@ -19,9 +19,17 @@ Nos itens 3 a 6, onde pede para implementar opções, provavelmente terei que cr
 No item 10, tem que colocar um loop caso o usuário digite um valor não permitido com uma opção de 'abortar missão' após o primeiro erro.
 */
 
+
+
+alert(`Bem vindo ao CRUD v1.0 do programa Entra21. Você pode realizar diversas funções no banco de dados, que contém as informações marca, nome do produto e valor.`)
+let A = `cadastrar produto`
+let B = `deletar produto`
+let C = `editar produto`
+let D = `listar produtos`
 let opcaoMenu
+
 do{
-	opcaoMenu = prompt(`Digite uma das opções: \n A- cadastrar produto \n B- deletar produto \n C- editar produto \n D- listar produtos \n 0- sair`).toUpperCase()
+	opcaoMenu = prompt(`Digite uma das opções: \n A- ${A} \n B- ${B} \n C- ${C} \n D- ${D} \n 0- sair`).toUpperCase()
 
 	switch(opcaoMenu){
 		case '0':
@@ -30,23 +38,23 @@ do{
 			break
 
 		case 'A':
-
-			alert(`Você escolheu a opção ${opcaoMenu}: cadastrar produto.`)
+			alert(`Você escolheu a opção ${opcaoMenu}: ${A}.`)
+			//abrir função para cadastrar o produto. Penso que pode ser uma função que pergunta as 3 características e faz um push.
 			break
 		
 		case 'B':
-
-			alert(`Você escolheu a opção ${opcaoMenu}: Falar com o RH.`)
+			alert(`Você escolheu a opção ${opcaoMenu}: ${B}.`)
+			// abrir função para deletar. Abrir a lista de produtos e perguntar qual a linha e qual a coluna do produto a ser deletado.
 			break
 
 		case 'C':
-
-			alert(`Você escolheu a opção ${opcaoMenu}: Falar com o gerente.`)
+			alert(`Você escolheu a opção ${opcaoMenu}: ${C}.`)
+			// similar à anterior, abrir a lista, perguntar qual a linha e coluna e depois os novos valores a serem inseridos.
 			break
 
 		case 'D':
-
-			alert(`Você escolheu a opção ${opcaoMenu}: Sair.`)
+			alert(`Você escolheu a opção ${opcaoMenu}: ${D}.`)
+			// abre a função de listar produtos, que será usada novamente nos casos B e C
 			break
 
 		default:
@@ -56,3 +64,4 @@ do{
 	}
 } while (opcaoMenu == 'Z')
 
+console.log(opcaoMenu)
