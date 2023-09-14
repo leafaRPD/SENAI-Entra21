@@ -24,7 +24,7 @@ No item 10, tem que colocar um loop caso o usuário digite um valor não permiti
 */
 
 				// organização da lista de produtos : ['MARCA', 'NOME DO PRODUTO', 'VALOR']
-
+				Validar para não permitir cadastro de um produto com mesmo nome.
 let listaProdutos = [[`KICHUTE`, `SAPATO`, 16.99],[`PLASTIQUARE`, `POTE`, 1.50],[`JAYUNG`, `PESO DE PORTA`, 66.66], [`M`,`P`, 3], [`M`,`PP`, 23]]
 
 //console.table(listaProdutos)
@@ -40,10 +40,18 @@ let listaFiltrada // para as funções deletar e editar produto
 
 				// lista de funções:
 
-// função de cadastrar um novo produto (cp):
+// funções de cadastrar um novo produto (cp) e de verificar se o produto já existe:
 function cp(marca, nomeDoProduto, valor) {
-	let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
-	listaProdutos.push(novoProduto)
+	if (!produtoExiste(nomeDoProduto)) { // Verifica se o produto já existe ou não na lista.
+        let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
+        listaProdutos.push(novoProduto)
+    } else {
+        alert(`Produto já está cadastrado. A lista não foi modificada.`)
+    }
+}
+
+function produtoExiste(nomeDoProduto) {
+    return listaProdutos.some(produto => produto[1].toUpperCase() === nomeDoProduto.toUpperCase());
 }
 
 // funções para deletar produtos: (filtrarProduto e outra anônima, dentro do menu)
@@ -64,6 +72,18 @@ function ml() {
 	console.table(listaProdutos)
 	alert(listaDeProdutosNoAlert)
 }
+// função para validação; para não permitir valores negativos ou zero.
+function pedirValor() {
+    do {
+        valor = Number(prompt(`Digite o valor do produto maior que zero, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
+        valor = Number(valor)
+        if (valor <= 0) {
+            alert("Valor inválido. Por favor tente novamente, utilizando um valor maior que zero.")
+        }
+    } while (valor <= 0)
+    return valor
+}
+
 
 							// início do corpo do código:
 
@@ -80,8 +100,7 @@ do{
 			//abrir função para cadastrar o produto. Penso que pode ser uma função que pergunta as 3 características e faz um push.
 			marca = prompt(`Digite a marca do produto:`).toUpperCase()
 			nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
-			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
-			valor = Number(valor)
+			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			cp(marca, nomeDoProduto, valor) // função Cadastrar Produto.
 			alert(`Você cadastrou um novo produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}`)
 			console.table(listaProdutos)
@@ -93,8 +112,7 @@ do{
 			ml()
 			marca = prompt(`Digite a marca do produto:`).toUpperCase()
 			nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
-			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
-			valor = Number(valor)
+			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			filtrarProduto()
   			// Outra função para remover da listaProdutos apenas o item selecionado pela listaFiltrada:
   			listaProdutos = listaProdutos.filter(produtoSelecionado => !listaFiltrada.includes(produtoSelecionado))
@@ -107,15 +125,13 @@ do{
 			alert(`Você escolheu a opção ${opcaoMenu}: ${C}.`)
 			marca = prompt(`Digite a marca do produto a ser editado:`).toUpperCase()
 			nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
-			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
-			valor = Number(valor)
+			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			filtrarProduto()
 			listaProdutos = listaProdutos.filter(produtoSelecionado => !listaFiltrada.includes(produtoSelecionado))
 			alert(`Você selecinou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}. Digite a seguir com quais dados você quer editá-lo.`)
 			marca = prompt(`Digite o nome da nova marca do produto. Se for igual, apenas repita-a.`).toUpperCase()
 			nomeDoProduto = prompt(`Digite o novo nome do produto:`).toUpperCase()
-			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
-			valor = Number(valor)
+			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			cp(marca, nomeDoProduto, valor) // função Cadastrar Produto.
 			alert(`Você editou o produto com os seguintes dados:\nmarca ${marca} \nde nome ${nomeDoProduto} \nvalor ${valor}`)
 			console.table(listaProdutos)
@@ -137,3 +153,6 @@ do{
 } while (opcaoMenu == 'Z')
 
 console.log(opcaoMenu)
+
+
+
