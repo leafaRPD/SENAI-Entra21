@@ -19,7 +19,7 @@ Nos itens 3 a 6, onde pede para implementar opções, provavelmente terei que cr
 No item 10, tem que colocar um loop caso o usuário digite um valor não permitido com uma opção de 'abortar missão' após o primeiro erro.
 */
 
-// listaProdutos = ['MARCA', 'NOME DO PRODUTO', 'VALOR']
+// organização da lista de produtos : ['MARCA', 'NOME DO PRODUTO', 'VALOR']
 listaProdutos = [[`KICHUTE`, `SAPATO`, 16.99],[`PLASTIQUARE`, `POTE`, 1.50],[`JAYUNG`, `PESO DE PORTA`, 66.66]]
 //console.table(listaProdutos)
 
@@ -29,7 +29,12 @@ let B = `deletar produto`
 let C = `editar produto`
 let D = `listar produtos`
 let opcaoMenu
-
+// lista de funções:
+// função de cadastrar um novo produto (cd):
+function cd(marca, nomeDoProduto, valor) {
+	let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
+	listaProdutos.push(novoProduto)
+}
 
 
 do{
@@ -37,7 +42,6 @@ do{
 
 	switch(opcaoMenu){
 		case '0':
-
 			alert(`Você escolheu a opção ${opcaoMenu}: Sair.`)
 			break
 
@@ -45,30 +49,31 @@ do{
 			alert(`Você escolheu a opção ${opcaoMenu}: ${A}.`)
 			//abrir função para cadastrar o produto. Penso que pode ser uma função que pergunta as 3 características e faz um push.
 			let marca = prompt(`Digite a marca do produto:`).toUpperCase()
-			let nomeDoProduto = prompt(`Digite o nome do novo produto:`).toUpperCase()
-			let valor = Number(prompt(`Digite o valor do produto, utilizando ponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
+			let nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
+			let valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
 			valor = Number(valor)
-			function cd(marca, nomeDoProduto, valor) {
-    			let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
-				listaProdutos.push(novoProduto)
-			}
 			cd(marca, nomeDoProduto, valor)
+			alert(`Você cadastrou um novo produto da marca ${marca}, de nome ${nomeDoProduto} e valor ${valor}`)
 			console.table(listaProdutos)
+			opcaoMenu = 'Z'
 			break
 		
 		case 'B':
 			alert(`Você escolheu a opção ${opcaoMenu}: ${B}.`)
 			// abrir função para deletar. Abrir a lista de produtos e perguntar qual a linha e qual a coluna do produto a ser deletado.
+			opcaoMenu = 'Z'
 			break
 
 		case 'C':
 			alert(`Você escolheu a opção ${opcaoMenu}: ${C}.`)
 			// similar à anterior, abrir a lista, perguntar qual a linha e coluna e depois os novos valores a serem inseridos.
+			opcaoMenu = 'Z'
 			break
 
 		case 'D':
 			alert(`Você escolheu a opção ${opcaoMenu}: ${D}.`)
 			// abre a função de listar produtos, que será usada novamente nos casos B e C. A questão é como organizar essa lista.
+			opcaoMenu = 'Z'
 			break
 
 		default:
