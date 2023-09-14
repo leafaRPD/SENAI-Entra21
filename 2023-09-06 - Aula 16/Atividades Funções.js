@@ -47,6 +47,24 @@ alert(`A média é ${media}.`)
 // as variáveis que foram declaradas dentro da função autoinvocada só existem dentro da função. Ou seja, se chamar a variável do lado de fora (como fazer um console.log), ela não existe.
 
 /* 
-3 - Crie um Array numérico com 10 elementos e a partir dele utilize os métodos
-mostrados para verificar se todos são ímpares. Além disse crie outro Array a partir
-dele onde os novos elementos devem ser os antigos ao quadrado. */
+3 - Crie um Array numérico com 10 elementos e a partir dele utilize os métodos mostrados para verificar se todos são ímpares. Além disse crie outro Array a partir dele onde os novos elementos devem ser os antigos ao quadrado. */
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//verificar se todos são ímpares. Usaremos o every.
+let verificacao = numeros.every(itemAtual => itemAtual%2 != 0)
+console.log(verificacao)
+
+// verificar se pelo menos um numero é ímpar:
+let verificacaoSome = numeros.some(itemAtual => itemAtual%2 != 0)
+console.log(verificacaoSome)
+
+// Criar um novo array com os numeros antigos ao quadrado
+let novoArray = numeros.map(itemAtual => itemAtual**2)
+console.log(novoArray)
+
+// join: transformar array em string: 
+let stringArray = numeros.join() // o divisor padrão é a vírgula. Se colocar "" aspas vazias, ele remove o separador. Se colocar "-", o separador é o - (traço). "ola" vira 1ola2ola3ola4ola5ola6ola7ola8ola9ola10
+console.log(stringArray)
+
+// reduce:
+numeros.reduce() // ficou para a próxima aula.

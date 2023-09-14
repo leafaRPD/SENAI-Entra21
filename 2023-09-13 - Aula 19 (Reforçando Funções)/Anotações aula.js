@@ -78,3 +78,5 @@ console.log(metadeNumeros)
 let numeros = [2, 20, 50]
 let resultadoMap = numeros.map((numero) => numero / 2)
 console.log(resultadoMap)
+
+// join: foi usado no exemplo da aula 16, nas Atividades de Funções.
