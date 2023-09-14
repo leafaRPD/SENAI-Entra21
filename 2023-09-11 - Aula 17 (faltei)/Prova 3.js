@@ -1,6 +1,3 @@
-/* Faltei esta aula pois estávamos no aeroporto em SP. O professor realizou a avaliação 2 (0,2 da nota final) e lançou a avaliação 3 (0,6 da nota final).
-*/
-
 /*
 (1,0) Criar uma mensagem de boas-vindas explicando o sistema.
 (1,0) Criar menu funcional (com loop) com as opções do CRUD e a opção "sair".
@@ -12,24 +9,15 @@
 (1,0) Criar mensagens de feedback para o usuário após as ações.
 (1,0) Validar para não permitir cadastro de um produto com mesmo nome.
 (1,0) Validar para não permitir valores negativos ou zero.
-
-marca, nome e valor
-
-listaMarcas -> coluna 0; terá valores repetidos caso uma marca tenha mais de 1 produto
-listaProduto -> coluna 1; terá o nome do produto. Só pode se repetir se mais de uma marcar produzir o mesmo produto.
-listaPreço   -> coluna 2: porerá ter qualquer valor numérico, com 2 casas decimais.
-
-Nos itens 3 a 6, onde pede para implementar opções, provavelmente terei que criar 1 função para da opção.
-No item 10, tem que colocar um loop caso o usuário digite um valor não permitido com uma opção de 'abortar missão' após o primeiro erro.
 */
 
 				// organização da lista de produtos : ['MARCA', 'NOME DO PRODUTO', 'VALOR']
-				Validar para não permitir cadastro de um produto com mesmo nome.
+				
 let listaProdutos = [[`KICHUTE`, `SAPATO`, 16.99],[`PLASTIQUARE`, `POTE`, 1.50],[`JAYUNG`, `PESO DE PORTA`, 66.66], [`M`,`P`, 3], [`M`,`PP`, 23]]
 
 //console.table(listaProdutos)
 
-//alert(`Bem vindo ao CRUD v1.0 do programa Entra21. Você pode realizar diversas funções no banco de dados, que contém as informações marca, nome do produto e valor.`)
+alert(`Bem vindo ao CRUD v1.0 do programa Entra21. Você pode realizar diversas funções no banco de dados, que contém as informações marca, nome do produto e valor.`)
 let A = `cadastrar produto`
 let B = `deletar produto`
 let C = `editar produto`
@@ -45,6 +33,7 @@ function cp(marca, nomeDoProduto, valor) {
 	if (!produtoExiste(nomeDoProduto)) { // Verifica se o produto já existe ou não na lista.
         let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
         listaProdutos.push(novoProduto)
+		alert(`Você cadastrou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}`)
     } else {
         alert(`Produto já está cadastrado. A lista não foi modificada.`)
     }
@@ -60,7 +49,7 @@ function filtrarProduto() {
       return produtoSelecionado[0] === marca && produtoSelecionado[1] === nomeDoProduto && produtoSelecionado[2] === valor
     })
 }
-  
+
 // função editar produtos: será uma composição das funções de cadastrar e deletar produto.
 
 // função para mostrar a lista de produtos (ml):
@@ -102,7 +91,6 @@ do{
 			nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
 			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			cp(marca, nomeDoProduto, valor) // função Cadastrar Produto.
-			alert(`Você cadastrou um novo produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}`)
 			console.table(listaProdutos)
 			opcaoMenu = 'Z'
 			break
@@ -128,12 +116,11 @@ do{
 			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			filtrarProduto()
 			listaProdutos = listaProdutos.filter(produtoSelecionado => !listaFiltrada.includes(produtoSelecionado))
-			alert(`Você selecinou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}. Digite a seguir com quais dados você quer editá-lo.`)
+			alert(`Você selecinou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}. \nDigite a seguir com quais dados você quer editá-lo.`)
 			marca = prompt(`Digite o nome da nova marca do produto. Se for igual, apenas repita-a.`).toUpperCase()
 			nomeDoProduto = prompt(`Digite o novo nome do produto:`).toUpperCase()
 			valor = pedirValor() // função com loop para impedir que venham valores inválidos
 			cp(marca, nomeDoProduto, valor) // função Cadastrar Produto.
-			alert(`Você editou o produto com os seguintes dados:\nmarca ${marca} \nde nome ${nomeDoProduto} \nvalor ${valor}`)
 			console.table(listaProdutos)
 			opcaoMenu = 'Z'
 			break
