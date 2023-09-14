@@ -1,7 +1,8 @@
 /* Faltei esta aula pois estávamos no aeroporto em SP. O professor realizou a avaliação 2 (0,2 da nota final) e lançou a avaliação 3 (0,6 da nota final).
 */
 
-/*(1,0) Criar uma mensagem de boas-vindas explicando o sistema.
+/*
+(1,0) Criar uma mensagem de boas-vindas explicando o sistema.
 (1,0) Criar menu funcional (com loop) com as opções do CRUD e a opção "sair".
 (1,0) Implementar a opção "cadastrar produto".
 (1,0) Implementar a opção "deletar produto".
@@ -22,8 +23,9 @@ Nos itens 3 a 6, onde pede para implementar opções, provavelmente terei que cr
 No item 10, tem que colocar um loop caso o usuário digite um valor não permitido com uma opção de 'abortar missão' após o primeiro erro.
 */
 
-// organização da lista de produtos : ['MARCA', 'NOME DO PRODUTO', 'VALOR']
-	let listaProdutos = [[`KICHUTE`, `SAPATO`, 16.99],[`PLASTIQUARE`, `POTE`, 1.50],[`JAYUNG`, `PESO DE PORTA`, 66.66], [`M`,`P`, 3], [`M`,`PP`, 23]]
+				// organização da lista de produtos : ['MARCA', 'NOME DO PRODUTO', 'VALOR']
+
+let listaProdutos = [[`KICHUTE`, `SAPATO`, 16.99],[`PLASTIQUARE`, `POTE`, 1.50],[`JAYUNG`, `PESO DE PORTA`, 66.66], [`M`,`P`, 3], [`M`,`PP`, 23]]
 
 //console.table(listaProdutos)
 
@@ -34,9 +36,10 @@ let C = `editar produto`
 let D = `listar produtos`
 let opcaoMenu, marca, nomeDoProduto, valor
 let listaDeProdutosNoAlert // para a função mostrar lista de produtos
-let listaFiltrada // para as funções deletar produto
+let listaFiltrada // para as funções deletar e editar produto
 
-// lista de funções:
+				// lista de funções:
+
 // função de cadastrar um novo produto (cp):
 function cp(marca, nomeDoProduto, valor) {
 	let novoProduto = [`${marca}`, `${nomeDoProduto}`, valor]
@@ -46,11 +49,11 @@ function cp(marca, nomeDoProduto, valor) {
 // funções para deletar produtos: (filtrarProduto e outra anônima, dentro do menu)
 function filtrarProduto() {
     listaFiltrada = listaProdutos.filter(produtoSelecionado => {
-      return produtoSelecionado[0] === marca && produtoSelecionado[1] === nomeDoProduto && produtoSelecionado[2] === valor;
+      return produtoSelecionado[0] === marca && produtoSelecionado[1] === nomeDoProduto && produtoSelecionado[2] === valor
     })
-  }
+}
   
-// função editar produtos (edt): será uma composição das funções de cadastrar e deletar produto.
+// função editar produtos: será uma composição das funções de cadastrar e deletar produto.
 
 // função para mostrar a lista de produtos (ml):
 function ml() {
