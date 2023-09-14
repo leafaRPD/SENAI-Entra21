@@ -47,6 +47,8 @@ let listaDobro = lista.map((itemDoArray) => {return itemDoArray*2
 }
 )
 console.log(listaDobro)
+lista
+
 
 outro exemplo:
 let palavras = ["Ruan", "Marco", "Giu"]

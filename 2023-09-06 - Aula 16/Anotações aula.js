@@ -11,10 +11,10 @@ console.log(verificacaoDePares) // true ou false
 
 
 let lista = [30, 10, 54, 40, 33, 1, 70]
-let verificacaoDePares = lista.filter(function(valorAtual){
+let maiorQue = lista.filter(function(valorAtual){
     return valorAtual > 40
 })
-console.log(verificacaoDePares)
+console.log(maiorQue)
 
 
 let numeros = [3,5,6,10,19,24,34]
