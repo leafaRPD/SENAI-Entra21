@@ -24,13 +24,27 @@ console.log(mensagem)
 calcule a média deles. Use uma função autoinvocada para encapsular o código da
 calculadora.
 */
-
-
-
-
-
-
-
+// exemplo:
+(function () {
+    console.log("Olá")
+})() // esses parênteses no final, e o parêntese no início e após as chaves {}, fazem com que ela seja autoinvocada.
+// resolução:
+(function(){
+    let soma = 0
+    let contagem = 0
+    let opcao = ""
+    while(opcao != "sair"){
+        opcao = prompt(`Digite um número ou 'sair'`)
+        if(opcao != 'sair'){
+            opcao = Number(opcao)
+            soma += opcao
+            contagem ++
+        }
+    }
+let media = soma / contagem
+alert(`A média é ${media}.`)
+} )()
+// as variáveis que foram declaradas dentro da função autoinvocada só existem dentro da função. Ou seja, se chamar a variável do lado de fora (como fazer um console.log), ela não existe.
 
 /* 
 3 - Crie um Array numérico com 10 elementos e a partir dele utilize os métodos
