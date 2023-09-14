@@ -95,14 +95,27 @@ do{
 			filtrarProduto()
   			// Outra função para remover da listaProdutos apenas o item selecionado pela listaFiltrada:
   			listaProdutos = listaProdutos.filter(produtoSelecionado => !listaFiltrada.includes(produtoSelecionado))
-  			alert(`Você deletou o  produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}`)
+  			alert(`Você deletou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}`)
 			console.table(listaProdutos)
 			opcaoMenu = 'Z'
 			break
 
 		case 'C':
 			alert(`Você escolheu a opção ${opcaoMenu}: ${C}.`)
-			// similar à anterior, abrir a lista, perguntar qual a linha e coluna e depois os novos valores a serem inseridos.
+			marca = prompt(`Digite a marca do produto a ser editado:`).toUpperCase()
+			nomeDoProduto = prompt(`Digite o nome do produto:`).toUpperCase()
+			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
+			valor = Number(valor)
+			filtrarProduto()
+			listaProdutos = listaProdutos.filter(produtoSelecionado => !listaFiltrada.includes(produtoSelecionado))
+			alert(`Você selecinou o produto da \nmarca ${marca}, \nde nome ${nomeDoProduto}, \nvalor ${valor}. Digite a seguir com quais dados você quer editá-lo.`)
+			marca = prompt(`Digite o nome da nova marca do produto. Se for igual, apenas repita-a.`).toUpperCase()
+			nomeDoProduto = prompt(`Digite o novo nome do produto:`).toUpperCase()
+			valor = Number(prompt(`Digite o valor do produto, utilizando \nponto '.' e 2 casas decimais (ex: 16.39):`)).toFixed(2)
+			valor = Number(valor)
+			cp(marca, nomeDoProduto, valor) // função Cadastrar Produto.
+			alert(`Você editou o produto com os seguintes dados:\nmarca ${marca} \nde nome ${nomeDoProduto} \nvalor ${valor}`)
+			console.table(listaProdutos)
 			opcaoMenu = 'Z'
 			break
 
