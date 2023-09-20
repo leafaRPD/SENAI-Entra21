@@ -15,7 +15,7 @@ let lista = [30, 10, 54]
 let verificacaoDePares = lista.every((itemDoArray) => {return itemDoArray % 2 == 0 })
 console.log(verificacaoDePares) // true ou false
     
-    //no início, caso houvesse mais de 1 parâmetro, coloca-se parênteses e usa-se a vírgula para separar os parâmetros. Se usar chaves {}, tem que ter return. Se não usar chaevs, não pode ter return
+    //no início, caso houvesse mais de 1 parâmetro, coloca-se parênteses e usa-se a vírgula para separar os parâmetros. Se usar chaves {}, tem que ter return. Se não usar chaves, não pode ter return
 
 // some: se algum atender à condição (no exemplo, se ao menos 1 deles for par), ele retornará que é verdadeiro.
 
@@ -50,7 +50,7 @@ console.log(listaDobro)
 lista
 
 
-outro exemplo:
+//outro exemplo:
 let palavras = ["Ruan", "Marco", "Giu"]
 
 let nomes = palavras.map(palavrasIndividual => {
