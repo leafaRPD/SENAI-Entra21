@@ -1,7 +1,44 @@
 /*Atividade (Arrow Functions + métodos de Array)*/
 
 // Crie 2 funções: a primeira recebe 3 números como argumento, realize a soma desses 3 números e chama a segunda função, que por sua vez recebe como argumento uma soma e uma quantidade e retorna a média. Armazene o resultado da média em uma variável e exiba por um alert.
-let n1, n2, n3, media, qtd
+
+// Solução do ChatGPT:
+// Segunda função: Calcula a média /* ou seja, primeiro se declara a 2ª função, que será chamada pela primeira
+let calcularMedia = (soma, quantidade) => soma / quantidade
+
+// Primeira função: Soma três números e chama a segunda função para calcular a média.
+let somaECalcMedia = (a, b, c) => {
+    let soma = a + b + c
+    return calcularMedia(soma, 3)
+}
+
+// Chamando a primeira função com três números e exibindo o resultado em um alert
+let media = somaECalcMedia(10, 20, 30) // você pode substituir 10, 20, 30 pelos números que desejar
+alert(`A média dos números é: ${media}`)
+
+
+
+/* Crie uma função anônima para gerar uma mensagem de convite de casamento, 
+que deve receber nomeConvidado, data, horário, local e nomeNoivos e a partir 
+disso monte uma mensagem convidando a pessoa para o casamento.
+Realize pelo menos 3 chamadas para ela e valide se o retorno foi o esperado.
+*/
+let geraMensagem = function (nomeConvidado, data, horario, local, nomeNoivos){
+    let mensagem = `Caro ${nomeConvidado}, 
+    Te para uma cerimônia de casamento, no dia ${data} as ${horario} horas no local
+    ${local}.
+    
+    Atenciosamento ${nomeNoivos}`
+    console.log(mensagem)
+  }
+  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
+  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
+  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
+
+
+
+
+
 
 // Faça um programa que recebe três números do usuário, e identifica o maior através de uma função e o menor número através de outra função e depois os exibe por um alert. 
 
