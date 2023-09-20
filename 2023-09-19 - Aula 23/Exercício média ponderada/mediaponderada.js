@@ -6,10 +6,11 @@ let ee = document.getElementById('notaTres')
 let ff = document.getElementById('pesoNotaTres')
 let soma
 let peso
-let media = (soma / peso)
+
 
 function MediaPonderada(){
-    soma = Number(aa.value) + Number(cc.value) + Number(ee.value)
-    peso = Number(bb.value) + Number(dd.value)+ Number(ff.value)
+    soma = Number(aa.value)*Number(bb.value) + Number(cc.value)*Number(dd.value) + Number(ee.value)*Number(ff.value)
+    peso = Number(bb.value) + Number(dd.value) + Number(ff.value)
+    let media = (soma / peso)
     alert(media)
 }
