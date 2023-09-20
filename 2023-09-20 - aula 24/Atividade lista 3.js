@@ -17,30 +17,26 @@ let media = somaECalcMedia(10, 20, 30) // você pode substituir 10, 20, 30 pelos
 alert(`A média dos números é: ${media}`)
 
 
-
-/* Crie uma função anônima para gerar uma mensagem de convite de casamento, 
-que deve receber nomeConvidado, data, horário, local e nomeNoivos e a partir 
-disso monte uma mensagem convidando a pessoa para o casamento.
-Realize pelo menos 3 chamadas para ela e valide se o retorno foi o esperado.
-*/
-let geraMensagem = function (nomeConvidado, data, horario, local, nomeNoivos){
-    let mensagem = `Caro ${nomeConvidado}, 
-    Te para uma cerimônia de casamento, no dia ${data} as ${horario} horas no local
-    ${local}.
-    
-    Atenciosamento ${nomeNoivos}`
-    console.log(mensagem)
-  }
-  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
-  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
-  geraMensagem('nomeConvidado', 'data', 'horario', 'local', 'nomeNoivos')
-
-
-
-
-
-
 // Faça um programa que recebe três números do usuário, e identifica o maior através de uma função e o menor número através de outra função e depois os exibe por um alert. 
+
+// declarar funções:
+let maiorEMenor = (a, b, c) => {
+ 
+}
+
+// testar função com os parâmetros escolhidos:
+let extremos = maiorEMenor (102, 103, 123, 456, 987, 789, 465, 654, 781)
+
+
+
+
+
+
+
+
+
+
+
 
 // Crie uma função que recebe um número inteiro e retorna todos os primos, de 1 até ele.
 
