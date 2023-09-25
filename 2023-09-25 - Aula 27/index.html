@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias e iframe</title>
+</head>
+<body>
+    
+<audio src="poke-gym.mp3" controls loop autoplay>
+<!-- supondo que o arquivo 'poke-gym.mp3' esteja na pasta da página.
+O 'controls' literalmente abre o painel de controle de música: play, pause, barra de range, volume e menu download;
+O 'loop' é para tocar a música em loop, senão toca apenas 1 vez;
+E o 'autoplay' era para tocar a música automaticamente, mas no Chrome e Edge não funcionou. 
+Estas são funcionalidades pouco usadas/novas. Em geral isso tudo é feito de outra forma via JS. -->
+</audio>
+<!-- Analogamente ao 'audio' tem a tag 'video'
+Agora, o que é um iframe: -->
+
+<!-- <iframe src="" frameborder="0"></iframe> -->
+<!-- ao invés de usar este, fiz uma copia do iframe de um vídeo do youtube: 
+    no vídeo de interesse, clicar em 'compartilhar' e depois 'incorporar'. Abrirá o iframe pronto: basta copiar e colar. 
+Mas também pode-se incorporar um mapa do Maps. Tem que ler a documentação do iframe para entender quais/quantas coisas pode-se fazer. É bem completo.
+-->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b1dYkXjj-1o?si=jlP0ddl4GYcn0qtL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
+</body>
+</html>
+
+
+
+
