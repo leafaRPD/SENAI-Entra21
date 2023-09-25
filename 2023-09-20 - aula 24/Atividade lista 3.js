@@ -48,6 +48,44 @@ let extremos = maiorEMenor (102, 103, 123, 456, 987, 789, 465, 654, 781)
 
 // Crie um array de preços e use o método filter para criar um novo array que contenha apenas os preços inferioriores a R$ 50.
 
-// Fazer um programa no qual o usuário deve montar uma salada de frutas com uma cereja no final. Deve ser perguntado em sequência “Qual fruta adicionar?”. Quando for adicionado a cereja, finalizar com a frase “Sua salada de frutas está pronta!”. Mostrar a lista das frutas. (DESAFIO: Mostrar também a quantidade de cada fruta) 
+// Fazer um programa no qual o usuário deve montar uma salada de frutas com uma cereja no final. Deve ser perguntado em sequência “Qual fruta adicionar?”. Quando for adicionado a cereja, finalizar com a frase “Sua salada de frutas está pronta!”. Mostrar a lista das frutas. (DESAFIO: Mostrar também a quantidade de cada fruta)
+// resolução do professor. Na aula do dia 29/8 eu fiz o mesmo exercício de forma diferente.
+let frutas = []
+let frutasSemRepeticao = []
+let quantidadeDasFrutasSemRepeticao = []
+// Variavel para controlar o laço
+let continuar = true
 
-// DESAFIO REDUCE 2: Crie uma calculadora de médias solicitando as notas por meio de um laço de repetição while, onde o usuário tenha a opção de digitar uma nova  nota ou verificar resultado digitando “-1”. Armazene as notas em um Array e utilize o método reduce para obter a soma delas, após ter a soma calcule a média dividindo a soma pelo tamanho do array (array.length).
+while(continuar == true){
+    let fruta = prompt("Qual a fruta de agora?").toLowerCase()
+    if(fruta == "cereja"){
+        continuar = false
+    }
+    // Sempre adicionar a fruta, mesmo que seja cereja
+    frutas.push(fruta)  
+}
+
+alert("A salada está pronta!")
+alert(frutas)
+
+// Alimentar os vetores de frutasSemRepeticao e quantidadeDasFrutasSemRepeticao
+frutas.forEach(frutaAtual => {
+    // Verificar se a fruta já está no frutasSemRepeticao
+    let indiceDaFrutaAtual = frutasSemRepeticao.indexOf(frutaAtual)
+    if(indiceDaFrutaAtual == -1){
+        frutasSemRepeticao.push(frutaAtual)
+        // Adicionar novo indice com a quantidade 1
+        quantidadeDasFrutasSemRepeticao.push(1)
+    } else {
+        // 
+        quantidadeDasFrutasSemRepeticao[indiceDaFrutaAtual]++
+    }
+})
+
+// Exibir um alerta para cada fruta mostrando a sua quantidade
+for(let i = 0; i < frutasSemRepeticao.length; i++){
+    let mensagem = `A fruta ${frutasSemRepeticao[i]} tem ${quantidadeDasFrutasSemRepeticao[i]} elementos na salada`
+    alert(mensagem)
+}
+
+// DESAFIO REDUCE 2: Crie uma calculadora de médias solicitando as notas por meio de um laço de repetição while, onde o usuário tenha a opção de digitar uma nova nota ou verificar resultado digitando “-1”. Armazene as notas em um Array e utilize o método reduce para obter a soma delas, após ter a soma calcule a média dividindo a soma pelo tamanho do array (array.length).
