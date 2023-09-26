@@ -1,18 +1,47 @@
-header{  /* no CSS usa-se chaves*/
-    height: 20%;
-    background-color: rgb(4, 17, 59);
-
+html{ /* no CSS usa-se chaves*/
+    height: 100%;
+    margin: 0;
 }
 
-main {
-    height: 60%;
-    background-color: rgb(27, 34, 34);
+body{ 
+    height: 100%;
+    margin: 0;
+}
 
+header{  
+    height: 33s%;
+    background-color: rgb(4, 17, 59);
+}
+
+main{
+    height: 37%;
+    background-color: rgb(49, 56, 56);
+    display: flex;
+}
+
+aside{
+    height: 100%;
+    width: 30%;
+    background-color: beige;
+}
+
+section{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(195, 241, 241);
 }
 
 footer{
-    height: 20%;
-    background-color: aqua;
+    height: 30%;
+    background-color: rgb(26, 93, 105);
+}
 
-
+.btns{
+    height: 30px; 
+    border-radius: 9px;
+    border: solid 2px black;
+    width: auto;
+    cursor: pointer;
+    /* background-color: blueviolet; */
+    
 }
