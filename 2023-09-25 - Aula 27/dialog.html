@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Modal </title>
+</head>
+<body>
+    
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi unde labore tenetur rerum consequatur laborum tempora, velit dolor vero quibusdam enim soluta quos? Placeat doloremque inventore, quia iusto ullam ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni quisquam architecto qui nihil perspiciatis ut voluptas fugit optio ratione molestiae minus perferendis repellendus labore placeat fugiat, beatae ullam ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat esse nihil cumque tenetur laboriosam ad mollitia delectus perferendis, consectetur, dolorum unde eaque? Ipsam atque sequi cupiditate quas dolorem dicta magnam?
+    </p>
+
+
+    <button onclick="ModalOpen()"> Abrir o modal e ver como aparece: </button>
+
+    <dialog id="modal">  <!-- esse é o exemplo  -->
+        
+        <h1> Oi, eu sou o título do tal do modal </h1>
+        <label> Nome: </label><input> <br> <br>
+        <label> Senha: </label><input> <br> <br>
+        <br> <br>
+        <button onclick = "ModalClose()"> Close (fechar memo) </button> <!-- cria-se um botão que ao ser clicado (onclick) executa uma função (ModalClose).  -->
+
+    </dialog>
+
+    <script src="modal.js"></script>
+
+</body>
+</html>

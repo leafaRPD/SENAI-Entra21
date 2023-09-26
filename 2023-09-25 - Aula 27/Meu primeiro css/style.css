@@ -1,0 +1,18 @@
+header{  /* no CSS usa-se chaves*/
+    height: 20%;
+    background-color: rgb(4, 17, 59);
+
+}
+
+main {
+    height: 60%;
+    background-color: rgb(27, 34, 34);
+
+}
+
+footer{
+    height: 20%;
+    background-color: aqua;
+
+
+}
