@@ -1,3 +1,9 @@
+/* importando as fontes baixadas: */
+@font-face {
+    font-family: 'JMH Typewriter';
+    src: url(JMH Typewriter.ttf); /* endereço do diretório. */
+}
+
 html{ /* no CSS usa-se chaves*/
     height: 100%;
     margin: 0;
@@ -9,12 +15,12 @@ body{
 }
 
 header{  
-    height: 33s%;
+    height: 35%;
     background-color: rgb(4, 17, 59);
 }
 
 main{
-    height: 37%;
+    height: 30%;
     background-color: rgb(49, 56, 56);
     display: flex;
 }
@@ -22,7 +28,10 @@ main{
 aside{
     height: 100%;
     width: 30%;
-    background-color: beige;
+    /* background-color: beige; */
+    background-image: url("https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/avestruz.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 section{
@@ -32,16 +41,48 @@ section{
 }
 
 footer{
-    height: 30%;
+    height: 35%;
     background-color: rgb(26, 93, 105);
 }
 
-.btns{
+.btns :hover{
     height: 30px; 
     border-radius: 9px;
     border: solid 2px black;
-    width: auto;
     cursor: pointer;
+    width: auto;
+}
+
+#btn2{ /* para editar apenas este botão   */
+    margin: 3px;
+}
+
+#btnAside{
+    margin: 5px;
+    height: 35px;
+    border-radius: 8px 0px 8px 0px; /* indicados os 4 cantos do botão, sendo arredondados apenas 2 */
+    border: solid 1px black;
+    cursor: pointer; /* Muda o design do mouse quando o ponteiro está em cima do botão. */ 
+    opacity: 60%;   /* O padrão é 100%; colocar 80% significa que diminuiu 20. */
+    font-weight: bolder; /* Fonte em negrito. */
+    font-family: 'JMH Typewriter'; /* Escolha da fonte. */
+    font-size: 18px ;
+}
+
+/* Ordem de prioridade:
+1º Style (diretamente no HTML)
+2º ID #
+3º classe .
+*/
+
+/* para chamar uma fonte externa:
+Baixar de algum site e deixar dentro do arquivo (pq as fontes são arquivos pequenos)
+https://www.1001fonts.com/
+https://www.dafont.com/pt/
+
+para adicionar a fonte, primeiro baixar do site, descompactar para uma pasta no mesmo diretório do arquivo CSS.
+*/
+    
     /* background-color: blueviolet; */
     
-}
+
