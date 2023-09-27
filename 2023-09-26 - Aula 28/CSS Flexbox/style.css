@@ -7,15 +7,19 @@ body{
     background-color: rgb(27, 27, 63);
     margin: 0;
     display: flex;  /*    */
-    justify-content: center;/* reposiciona o botão para o meio da tela left-right.   */
-    flex-direction: column;/* transpõe radialmente. Como fizemos o botão na primeira linha, usamos o row, o 'colunador', e vira uma coluna com o botão no meio dela.   */
-
+    justify-content: space-around;/* reposiciona o botão para o meio da tela left-right.   */
+    /*flex-direction: column;  transpõe radialmente. Como fizemos o botão na primeira linha, usamos o row, o 'colunador', e vira uma coluna com o botão no meio dela.   */
+    align-items: center;
     
+}   
+
+.btn{
+    height: 43px;
+    width: 60px;
 }
 
-
-#btn{
+#btn2{
     height: 30px;
-    width: 50px;
+    
 
 }
