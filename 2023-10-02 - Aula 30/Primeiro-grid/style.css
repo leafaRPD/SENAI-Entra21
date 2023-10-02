@@ -1,0 +1,39 @@
+html{
+    margin: 10;
+    height: 100%;
+
+}
+body{
+    margin: 0;
+    height: 100%;
+
+}
+
+.grid-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-template-rows: auto auto auto;
+    gap: 9px 5px; /*atributos: 1º: geral - 2º: coluna. Ou usar os comando abaixo: */ 
+    column-gap: 20px;
+    row-gap: 3px;
+
+}
+
+.grid-items{
+    background-color: rgb(1, 85, 85);
+    
+
+}
+
+#item1{
+    grid-column-start: 1; /* para um quadrado 3x3 (9 células), tem 4 linhas e 4 colunas, começando do 1 ao 4.  */ 
+    grid-column-end: 4;
+}
+    
+#item4{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    
+}
