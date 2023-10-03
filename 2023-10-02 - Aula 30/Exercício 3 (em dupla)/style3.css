@@ -1,0 +1,69 @@
+html{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.grid-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 0px; /*atributos: 1º: geral - 2º: coluna. Ou usar os comando abaixo: */ 
+    /* column-gap: 20px;
+    row-gap: 3px; */
+}
+
+.grid-items{
+    background-color: rgb(48, 71, 112);
+    
+
+}
+
+
+#item1{
+    grid-column-start: 1; /* para um quadrado 3x3 (9 células), tem 4 linhas e 4 colunas, numeradas do 1 ao 4.  */
+    grid-column-end: 5;
+}
+    
+#item2{
+    background-image: url(https://www.cliccamaqua.com.br/wp-content/uploads/2022/01/img_57509_foto_1_a.jpg.webp);
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: auto;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#item3{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+#item4{
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#cabecalho{
+    background-color: rgb(118,169,188) ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgCab{
+    width: 350px;
+
+}
+
