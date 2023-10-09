@@ -1,0 +1,125 @@
+/* importando as fontes baixadas: */
+@font-face {
+    font-family: 'JMH Typewriter';
+    src: url(JMH Typewriter.ttf); /* endereço do diretório. */
+}
+
+html{ /* no CSS usa-se chaves*/
+    height: 100%;
+    margin: 0;
+}
+
+body{ 
+    background-image: url("https://www.10wallpaper.com/wallpaper/1920x1200/1207/color_background-Abstract_design_wallpaper_1920x1200.jpg");
+    height: 100%;
+    margin: 0;
+}
+
+header{  
+    display: flex;
+    height: 30%;
+}
+aside1{
+    justify-content: flex-start;
+    height: 100%;
+    width: 80%;
+  
+}
+aside2{
+    justify-content: flex-end;
+    height: 100%;
+    width: 20%;
+    background-color: brown;
+}
+
+
+main{
+    height: 40%;
+    display: flex;
+}
+
+aside{
+    height: 100%;
+    width: 18%;
+    background-image: url("https://media.sketchfab.com/models/58f39d6346f447cf9526b76368f89449/thumbnails/5066e79988a94ee98c31d51899b33ae1/d0867e8cc3d346bb882e85076276bbd2.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 90%
+    
+}
+
+section{
+    height: 100%;
+    width: 82%;
+    
+}
+
+footer{
+    height: 30%;
+    
+}
+
+.atalhos :hover{
+    height: 35px;  
+    width: auto;
+    margin: 3px;
+    border-radius: 9px;
+    border: solid 3px black;
+    cursor: pointer;
+    justify-content: flex-end;
+    
+}
+#inpt1 {
+    height: 25px;
+    width: 200px;
+    margin: 7px;
+}
+
+
+.btns :hover{
+    height: 30px; 
+    border-radius: 9px;
+    border: solid 2px black;
+    cursor: pointer;
+    width: auto;
+}
+
+#btn2{ /* para editar apenas este botão   */
+    margin: 3px;
+}
+
+#paragrafo{
+    font-palette: rgb(255, 244, 244);
+    font-size: 20px ;
+    margin: 10px;
+    
+}
+#btnAside{
+    margin: 5px;
+    height: 35px;
+    border-radius: 8px 0px 8px 0px; /* indicados os 4 cantos do botão, sendo arredondados apenas 2 */
+    border: solid 1px black;
+    cursor: pointer; /* Muda o design do mouse quando o ponteiro está em cima do botão. */ 
+    opacity: 60%;   /* O padrão é 100%; colocar 80% significa que diminuiu 20. */
+    font-weight: bolder; /* Fonte em negrito. */
+    font-family: 'JMH Typewriter'; /* Escolha da fonte. */
+  
+}
+
+/* Ordem de prioridade:
+1º Style (diretamente no HTML)
+2º ID #
+3º classe .
+*/
+
+/* para chamar uma fonte externa:
+Baixar de algum site e deixar dentro do arquivo (pq as fontes são arquivos pequenos)
+https://www.1001fonts.com/
+https://www.dafont.com/pt/
+
+para adicionar a fonte, primeiro baixar do site, descompactar para uma pasta no mesmo diretório do arquivo CSS.
+*/
+    
+    /* background-color: blueviolet; */
+    
+
