@@ -30,7 +30,7 @@ pessoa.altura = 1.81 // criou um atributo que não existia e atribuiu valor a el
 
 // voltando ao exemplo mais complexo:
 
-let pessoa = {
+let pessoa = { // é bom sempre usar aspas no 'nome', 'idade', etc, pq dá erro se esquecer de colocar ao usar JSON.
     "nome": "Rafael",
     "idade": 32,
     "gostoMusical": ["rock", "blues"],
@@ -47,6 +47,9 @@ let pessoa = {
     }
 }
 pessoa.saudacao()
+pessoa["idade atual"] = 30 // outra forma de alterar/adicionar informações. Quando o campo tem um espaço no meio, como neste caso do "idade(espaço)atual", essa é a única forma de fazer. Da outra forma não dá certo.
+
+console.log(pessoa)
 
 
 
