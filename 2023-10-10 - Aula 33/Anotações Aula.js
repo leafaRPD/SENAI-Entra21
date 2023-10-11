@@ -1,6 +1,7 @@
 /* Aula do Rafael Ventura, no software MySQL workbench. Usamos a sequência de códigos abaixo. 
 Anotações minhas:
 Clicar 2 vezes no tabela para usá-la (comando 'use clube_livro' é a forma de acessar isso quando não se tem uma IDE gráfica.)
+Ele passou um arquivo .txt no Classroom para facilitar a construção do banco de dados; o arquivo tem algumas listas que adicionamos com ctrl+c e ctrl+v.
 
 
 create database clube_livro;
@@ -110,5 +111,28 @@ INSERT INTO ESTOQUE VALUES
 (11, 3),
 (12, 3)
 ;
+
+INSERT INTO LIVROS (CATEGORIA, AUTORIA, NOME_LIVRO, EDITORA, ID_LIVRO, PRECO) VALUES
+('Biografia' ,    'Malala Yousafzai', 'Eu sou Malala'       , 'Companhia das Letras', 11, 22.32),
+('Biografia' ,    'Michelle Obama'  , 'Minha história'      , 'Objetiva'            ,    12,    57.90),
+('Biografia' ,    'Anne Frank'      , 'Diário de Anne Frank', 'Pe Da Letra'         , 13, 34.90);
+
+create database paraSerExcluida;
+drop database paraSerExcluida;
+
+create table vendedores2(
+id_vendedor int not null,
+nome_vendedor varchar(255) not null,
+primary key (id_vendedor)
+);
+
+drop table vendedores2;
+
+alter table livros add column (ano_publicacao int);
+alter table livros drop column ano_publicacao;
+
+
+set foreign_key_checks = 0;
+delete from livros where (nome_livro = 'Lusíadas');
 
 */
