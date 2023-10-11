@@ -131,8 +131,33 @@ drop table vendedores2;
 alter table livros add column (ano_publicacao int);
 alter table livros drop column ano_publicacao;
 
-
 set foreign_key_checks = 0;
+
 delete from livros where (nome_livro = 'Lusíadas');
+
+// alterando os preços de todos os livros em uma promoção:
+update livros set preco = preco*0.9; // se colocar parênteses NÃO funciona.
+
+// com este código, retornará 3 resultados de id_vendedor: 2, 4 e 4.
+select  id_vendedor from vendas where id_livro = 4;
+// Ou seja: o vendedor 4 vendeu este livro 2 vezes.
+// Para eliminar esta informação duplicada (pois eu queria saber quem vendeu e não quantas vezes/quantas vendas deste livro o vendedor fez.):
+select distinct id_vendedor from vendas where id_livro = 4;
+// Foi adicionada a condição 'distinct', que elimina os resultados repetidos.
+
+
+consultar quais foram os 3 vendedores com maior quantidade (soma) de vendas:
+
+select * from vendas;
+select * from vendedores;
+
+select vendas.id_vendedor, vendedores.nome_vendedor, sum(vendas.qtd_vendida)
+from vendas
+inner join vendedores
+on vendas.id_vendedor = vendedores.id_vendedor
+group by vendas.id_vendedor
+order by sum(vendas.qtd_vendida) desc // 'desc' é descendente
+limit 3
+;
 
 */
