@@ -90,3 +90,27 @@ function Carro(marca, modelo, ano){ // função construtora
 let carro1 = new Carro(vw, gol, 93) // uso da função construtora, criando um objeto 'carro1'.
 let carro2 = new Carro(Fiat, 147, 79) // criado o 'carro2', e assim vai.
 console.log(carro1)
+
+// JSON: Não pode ter métodos/funções, e precisa usar aspas duplas "".
+
+/*Datas: várias formas, formatos. Olhar slide.
+data atual
+data por meio de uma string de data
+data em milissegundos a partir de 1º de jan de 1970
+valors individuais de data (ano, mês, dia, hora, min, s, ms)
+
+Exemplos:
+const dataAtual = new Date()
+
+const dataEspecifica = new Date('2023-10-21')
+
+const dataPorMilisegundos = new Date (16333897864880100)
+
+                                ano, mês, dia, h, min, s, ms
+const dataCustomizada = new Date(2023, 1, 22, 14, 30, 0) // sendo que o Mês começa do zero (jan) e vai até 11 (dez). Se não colocar o dia, traz como dia 1. O resto (horário), se não colocar traz como zero.
+
+const data = new Date()
+const ano = data.getFullYear() // traz só o ano
+const mes = data.getMonth() // traz só o mês
+const dia = data.getDate() // traz o dia
+*/
