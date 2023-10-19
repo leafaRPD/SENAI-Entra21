@@ -1,7 +1,9 @@
 /* Aula do Ruan; iniciou a aula continuando a fazer exercícios que ficaram pendentes no final da aula anterior (Aula 34) 
+Prova: métodos de array, funções e objetos.
 
 Resolução de exercicios:
 
+ ** * * * * * **    ¡TENHO QUE PEGAR ESSE CÓDIGO CORRIGIDO!
 1 - Programe um sistema de gerenciamento de tarefas que permita aos usuários adicionar,
 concluir e remover tarefas. Cada tarefa deve ser um objeto com pelo menos as
 propriedades descrição (string), data de criação (Date) e status (boolean). */
@@ -46,7 +48,7 @@ while(continuar){
         // Remover
         let nomeTarefaExclusao = prompt(`Qual tarefa você deseja concluir?`)
         let indiceParaExclusao = listaTarefas.findIndex(objetoAtual => objetoAtual.descricao.toLocaleLowerCase().includes(nomeTarefaExclusao.toLocaleLowerCase()) == nomeTarefaExclusao)
-        if (indiceParaExclusao) !== -1) {
+        if (indiceParaExclusao) !== -1 {
             listaTarefas.splice(indiceParaExclusao, 1)
         }else{
           alert(`Tarefa não encontrada`)
