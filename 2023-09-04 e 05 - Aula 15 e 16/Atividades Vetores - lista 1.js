@@ -99,15 +99,16 @@ for (i=0; i<3; i++){
     varTemp = prompt(`Usuário, digite a ${i+1}º das três cores primárias:`)
     coresPrimarias.push(varTemp)
 }
+cores = coresPrimarias
 for (i=0; i<3; i++){
     varTemp = prompt(`Usuário, digite a ${i+1}º das três cores secundárias:`)
     coresSecundarias.push(varTemp)
+    cores.push(coresSecundarias[i])
 }
-cores = coresPrimarias
-cores.push(coresSecundarias[0])
-cores.push(coresSecundarias[1])
-cores.push(coresSecundarias[2])
+
+varTemp = prompt(`Adicionar no início da lista:`)
 cores.push('branco')
+varTemp = prompt(`Adicionar ao final da lista:`)
 cores.unshift('preto')
 console.log(cores)
 

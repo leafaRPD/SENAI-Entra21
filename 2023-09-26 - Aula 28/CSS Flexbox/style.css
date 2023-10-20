@@ -7,7 +7,7 @@ body{
     background-color: rgb(27, 27, 63);
     margin: 0;
     display: flex;  /*    */
-    justify-content: space-around;/* reposiciona o botão para o meio da tela left-right.   */
+    justify-content: space-around;/* reposiciona o botão para o meio da tela left-right, igualmente espaçado (exceto bordas, que são metade do espaçamento).   */
     /*flex-direction: column;  transpõe radialmente. Como fizemos o botão na primeira linha, usamos o row, o 'colunador', e vira uma coluna com o botão no meio dela.   */
     align-items: center;
     
